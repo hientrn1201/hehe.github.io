@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Date</title>
+    <link rel="stylesheet" href="css/date.css" />
+  </head>
+  <body>
+    <h1 title="choose a date">Lịch trình tạm thời cho ngày 1001 nhó :<</h1>
+    <table class="schedule">
+      <tr>
+        <td>
+          <h2>1AM - 1PM:</h2>
+        </td>
+        <td>
+          <div style="display: inline-flex; align-items:center">
+            <h2> Sáng ngủ ^^</h2>
+            <img style="height: 100px; margin-left: 10px;" src="peach-goma.gif" alt="Sleep GIF">
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <h2>1PM - 1:30PM:</h2>
+        </td>
+        <td>
+          <div style="display: inline-flex; align-items:center">
+            <h2> Cho vợ thay quần áo chụp ảnh bleble ^^</h2>
+            <img style="height: 100px; margin-left: 10px;" src="change-outfit-ignace-aleya.gif" alt="Sleep GIF">
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <h2>2PM - 3PM:</h2>
+        </td>
+        <td>
+          <div style="display: inline-flex; align-items:center">
+            <h2>Lillie's Restaurant</h2>
+            <img style="height: 100px; margin-left: 10px;" src="mochi-cat-eating.gif" alt="Sleep GIF">
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <h2>3:15PM - 5PM:</h2>
+        </td>
+        <td>
+          <div style="display: inline-flex; align-items:center" id="option1">
+            <h2>Inside Out</h2>
+            <img style="height: 100px; margin-left: 10px;" src="hair-flip-disgust.gif" alt="Sleep GIF">
+          </div>
+          <div style="display: inline-flex; align-items:center" id="option2">
+            <h2>Fotografiska Museum NYC</h2>
+            <img style="height: 100px; margin-left: 10px;" src="muppetwiki-muppet-wiki.gif" alt="Sleep GIF">
+          </div>
+          <div style="display: inline-flex; align-items:center" id="option3">
+            <h2>Olfactory NYC</h2>
+            <img style="height: 100px; margin-left: 10px;" src="hmns-pentol.gif" alt="Sleep GIF">
+          </div>
+          <button class="button" onclick="showOption()">Không chọn được thì để anh chọn nhó 🥹</button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <h2>5PM - 6PM</h2>
+        </td>
+        <td>
+          <div style="display: inline-flex; align-items:center">
+            <h2>Mua đồ nấu ăn nhóooo</h2>
+            <img style="height: 100px; margin-left: 10px;" src="christmas-shopping.gif" alt="Sleep GIF">
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <h2>6PM - 8PM</h2>
+        </td>
+        <td>
+          <div style="display: inline-flex; align-items:center">
+            <h2>Cúk king (<a href="menu.html">Menu ở đây ạ</a>)</h2>
+            <img style="height: 100px; margin-left: 10px;" src="bubududu-food.gif" alt="Sleep GIF">
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <h2>Hết ngày rồi làm gì cũng được nhỉ hi</h2>
+        </td>
+      </tr>
+    </table>
+    <div class="button-container">
+      <button class="button" onclick="location.href='lastpage.html'">
+        Cảm ơn em iu
+      </button>
+    </div>
+    <script>
+      function showOption() {
+        const options = ['option1', 'option2', 'option3'];
+        const randomOption = options[Math.floor(Math.random() * options.length)];
+        options.forEach(option => {
+          document.getElementById(option).style.display = 'none';
+        });
+        document.getElementById(randomOption).style.display = 'inline-flex';
+      }
+    </script>
+  </body>
+</html>
